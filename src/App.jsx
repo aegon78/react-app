@@ -1,5 +1,11 @@
+import Rating from './components/Rating';
+
 const App = ()=> {
-  return ( <div>Rate Your Experience</div> );
+  
+  return (
+    <Rating />
+  );
+
 };
 
 export default App
