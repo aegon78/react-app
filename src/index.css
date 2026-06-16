@@ -33,7 +33,8 @@ body {
 
 .star{
   transition: color 0.2s ease-in-out;
-  color: #ccc
+  color: #ccc;
+  font-size: 3.2rem;
 }
 
 .star.active{
