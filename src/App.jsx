@@ -1,9 +1,9 @@
-import Rating from './components/Rating';
+import Message from './components/Message';
 
 const App = ()=> {
   
   return (
-    <Rating />
+    <Message />
   );
 
 };
