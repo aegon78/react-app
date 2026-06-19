@@ -1,11 +1,10 @@
-import Message from './components/Message';
+import ListGroup from './components/ListGroup'
 
-const App = ()=> {
+
+function App() {
+  return <div> <ListGroup /> </div>
   
-  return (
-    <Message />
-  );
 
-};
+}
 
 export default App
