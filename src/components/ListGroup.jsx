@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-function ListGroup({items, heading}) {
+function ListGroup({items, heading, onSelectItem}) {
 
   const [selectedIndex, setSelectedIndex] = useState(-1)
 
@@ -19,7 +19,10 @@ function ListGroup({items, heading}) {
                 : 'list-group-item'
             }
             key={item}
-            onClick={() => (setSelectedIndex(idx))}
+            onClick={() => (setSelectedIndex(idx), //the instructor didn't add a column here and yet his code worked!
+            onSelectItem(item)
+            
+            )}
           >
             {item}
           </li>
