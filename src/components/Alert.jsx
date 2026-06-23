@@ -1,4 +1,5 @@
 import React from 'react'
+import './Alert.css'
 
 const Alert = ({children, onClose}) => {
     return (
@@ -7,6 +8,7 @@ const Alert = ({children, onClose}) => {
             className="btn-close" data-bs-dismiss="alert" aria-label="Close"
             onClick={onClose}
         >
+            x
         </button>
         {children}
     </div>
