@@ -1,9 +1,9 @@
-
+import styles from './Button.module.css'
 
 function Button({color = "success", children, onClick}){
     return(
     <button
-        className={'btn btn-' + color}
+        className={`${styles.btn} btn-` + color}
         onClick={onClick}
         
     >

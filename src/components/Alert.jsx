@@ -1,11 +1,10 @@
 import React from 'react'
-import './Alert.css'
-
+import styles from './Alert.module.css'
 const Alert = ({children, onClose}) => {
     return (
     <div className='alert alert-warning alert-dismissible'>
         <button
-            className="btn-close" data-bs-dismiss="alert" aria-label="Close"
+            className={`${styles.btn} btn-close`} data-bs-dismiss="alert" aria-label="Close"
             onClick={onClose}
         >
             x
