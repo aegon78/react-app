@@ -1,9 +1,9 @@
 import { useState } from "react"
-import ExpanseTracker from './components/ExpanseTracker'
+import ExpenseList from './components/expense-list'
 
 function App() {
   return(
-    <ExpanseTracker />
+    <ExpenseList />
   )
 }
 
