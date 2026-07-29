@@ -17,10 +17,18 @@ const ExpenseList = ({ expenses, onDelete }) => {
             <td>{expense.desciption}</td>
             <td>{expense.amount}</td>
             <td>{expense.category}</td>
-            <td><button className="btn btn-outline-danger" onClick={onDelete(expense.id)}></button></td>
+            <td><button className="btn btn-outline-danger" onClick={onDelete(expense.id)}>Delete</button></td>
           </tr>
         )}
       </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>${expenses.reduce((acc, expenses) => expenses.amount + acc, 0).toFixed(2)}</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tfoot>
     </table>
   )
 }
