@@ -2,6 +2,7 @@ import React from 'react'
 
 
 const ExpenseList = ({ expenses, onDelete }) => {
+  if (expenses.length === 0) return null
   return (
     <table className='table table-bordered'>
       <thead>
