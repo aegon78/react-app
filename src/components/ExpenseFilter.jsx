@@ -1,6 +1,4 @@
-import React from 'react'
-
-const ExpenseFilter = ( {onSelectCategory} ) => {
+const ExpenseFilter = ( { onSelectCategory } ) => {
   return (
     <select className="mb-3 form-select" onChange={ (e)=> onSelectCategory(e.target.value)}>
       <option value="">All categories</option>
