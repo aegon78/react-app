@@ -1,7 +1,20 @@
 import React from 'react'
 import { categories } from '../App'
+import { z } from 'zod'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+
+const schema = z.object({
+    description: z.string().min(3).max(50),
+    amount: z.number().min(0.01).max(100_000),
+    category: z.enum([...categories])
+})
+
 
 const ExpenseForm = () => {
+    const {register, handleSubmit, formState: {errors}} = useForm({
+        resolver: zodResolver(schema)
+    })
   return (
     <form>
         <div className="mb-3">
