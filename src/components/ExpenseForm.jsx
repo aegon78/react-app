@@ -12,19 +12,23 @@ const schema = z.object({
 
 
 const ExpenseForm = () => {
+
     const {register, handleSubmit, formState: {errors}} = useForm({
         resolver: zodResolver(schema)
     })
+
   return (
     <form>
         <div className="mb-3">
             <label htmlFor="description" className="form-label">Description</label>
             <input id="descriptionf" type="text" className="form-control" />
         </div>
+        
         <div className="mb-3">
             <label htmlFor="amount" className="form-label">Amount</label>
             <input id="amount" type="number" className="form-control" />
         </div>
+        
         <div className="mb-3">
             <label htmlFor="category" className="form-label"></label>
             <select name="" id="category" className="form-select">
